@@ -1,0 +1,4 @@
+Training records: 395939
+Testing records: 101533
+Training period: 2014-01-02 00:00:00 to 2017-03-14 00:00:00
+Testing period: 2017-03-15 00:00:00 to 2017-12-29 00:00:00
