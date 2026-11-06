@@ -1,4 +1,4 @@
-# Python virtual environments
+# Python environments
 env/
 .venv/
 venv/
@@ -20,6 +20,12 @@ Thumbs.db
 # Environment variables
 .env
 .env.*
+
+# Raw datasets
+data/
+
+# Large processed matrices
+outputs/*.npz
 
 # Temporary files
 *.log
