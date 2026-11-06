@@ -1,0 +1,72 @@
+Feature,Importance
+numerical__Customer service calls,0.13414065031069242
+numerical__Total day minutes,0.12336357680364234
+numerical__Total day charge,0.1219230948759437
+categorical__International plan_Yes,0.05100513971761412
+numerical__Total eve minutes,0.05092665103821569
+categorical__International plan_No,0.04883393831057731
+numerical__Total eve charge,0.04832431691505696
+numerical__Total intl minutes,0.0424432875389511
+numerical__Total intl charge,0.040651880934307105
+numerical__Total intl calls,0.03686068997612054
+numerical__Total night charge,0.03682072774849696
+numerical__Total night minutes,0.03619378992070518
+numerical__Total night calls,0.0311361062716278
+numerical__Total day calls,0.030960619302644998
+numerical__Total eve calls,0.030415382821172402
+numerical__Account length,0.03027402409386283
+numerical__Number vmail messages,0.02160566056035393
+categorical__Voice mail plan_Yes,0.012240219079041027
+categorical__Voice mail plan_No,0.011199603651138056
+numerical__Area code,0.008930520522513322
+categorical__State_TX,0.003171384967775345
+categorical__State_MS,0.002526151202179988
+categorical__State_NJ,0.0021797108087272545
+categorical__State_MT,0.0020698059011187682
+categorical__State_VA,0.0016995242745639829
+categorical__State_ME,0.0016428680285253457
+categorical__State_MI,0.0016311250254439646
+categorical__State_DC,0.0015904524404733993
+categorical__State_OH,0.0015337009404709156
+categorical__State_NY,0.0015031425110904701
+categorical__State_IN,0.0013926771286217393
+categorical__State_SC,0.001372709187741311
+categorical__State_NE,0.001231811283074729
+categorical__State_MN,0.001227477576011239
+categorical__State_MD,0.0011847096863706616
+categorical__State_NH,0.0010686894696463297
+categorical__State_ND,0.0010272810942970152
+categorical__State_CT,0.0010063996104670966
+categorical__State_WY,0.0009917199132602806
+categorical__State_FL,0.0009545143656824497
+categorical__State_CA,0.0009376805745157119
+categorical__State_NM,0.0009324176751958229
+categorical__State_ID,0.0009204439132990173
+categorical__State_UT,0.0009192028669200986
+categorical__State_WV,0.0009004967292201918
+categorical__State_WA,0.000893809282113541
+categorical__State_AR,0.0008655470780254605
+categorical__State_VT,0.0008593843084415301
+categorical__State_CO,0.0008338253786533975
+categorical__State_NC,0.0008218050822120925
+categorical__State_AL,0.0007973860979069915
+categorical__State_SD,0.0007743215104075471
+categorical__State_WI,0.0007635060238965123
+categorical__State_NV,0.0007429800800441674
+categorical__State_MA,0.0007162514401867754
+categorical__State_LA,0.0007136182488124977
+categorical__State_KS,0.0006664856740791447
+categorical__State_OR,0.0006580601609329286
+categorical__State_GA,0.0006069651925774562
+categorical__State_RI,0.000587155516002504
+categorical__State_AZ,0.0005723967551628531
+categorical__State_PA,0.0005527622400621089
+categorical__State_HI,0.0005382144721462851
+categorical__State_DE,0.0005151324170318174
+categorical__State_TN,0.00044459549338847493
+categorical__State_OK,0.0004430896284338731
+categorical__State_IL,0.0004349004744605131
+categorical__State_AK,0.0003795306254507412
+categorical__State_IA,0.0003533425662391815
+categorical__State_MO,0.00032368378421133824
+categorical__State_KY,0.0002752729017492589

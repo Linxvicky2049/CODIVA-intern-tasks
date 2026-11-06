@@ -1,0 +1,15 @@
+NEURAL NETWORK CLASSIFICATION REPORT
+=============================================
+
+              precision    recall  f1-score   support
+
+       False       0.93      0.97      0.95       572
+        True       0.78      0.56      0.65        95
+
+    accuracy                           0.91       667
+   macro avg       0.85      0.77      0.80       667
+weighted avg       0.91      0.91      0.91       667
+
+
+BEST PARAMETERS
+{'classifier__activation': 'tanh', 'classifier__alpha': 0.0001, 'classifier__hidden_layer_sizes': (100, 50)}

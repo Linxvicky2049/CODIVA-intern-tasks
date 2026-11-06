@@ -1,0 +1,18 @@
+
+NEURAL NETWORK CLASSIFICATION SUMMARY
+
+Training records: 2666
+Testing records: 667
+
+Accuracy: 0.9145
+Precision: 0.7794
+Recall: 0.5579
+F1 Score: 0.6503
+ROC-AUC: 0.9078
+
+Cross-validation F1: 0.6414
+
+Training iterations: 46
+
+Best Parameters:
+{'classifier__activation': 'tanh', 'classifier__alpha': 0.0001, 'classifier__hidden_layer_sizes': (100, 50)}

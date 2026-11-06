@@ -17,9 +17,11 @@ Operations:
 8. Saving processed datasets
 9. Generating visualizations
 """
-
 import os
+import numpy as np
 import pandas as pd
+
+from pathlib import Path
 import matplotlib.pyplot as plt
 import seaborn as sns
 
@@ -35,16 +37,33 @@ from sklearn.preprocessing import OneHotEncoder, StandardScaler
 # 1. CONFIGURATION
 # --------------------------------------------------
 
-DATA_PATH = "data/2) Stock Prices Data Set.csv"
+# Automatically locate the main internship repository.
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
 
-OUTPUT_DIR = "outputs"
-VISUALIZATION_DIR = os.path.join(
-    OUTPUT_DIR, "visualizations"
-)
+# Locate this specific task folder.
+TASK_DIR = Path(__file__).resolve().parents[1]
 
-os.makedirs(OUTPUT_DIR, exist_ok=True)
-os.makedirs(VISUALIZATION_DIR, exist_ok=True)
+# Dataset location.
+DATA_PATH = PROJECT_ROOT / "data" / "2) Stock Prices Data Set.csv"
 
+# Task-specific output locations.
+OUTPUT_DIR = TASK_DIR / "outputs"
+
+VISUALIZATION_DIR = OUTPUT_DIR / "visualizations"
+
+# Create directories if they do not exist.
+OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
+VISUALIZATION_DIR.mkdir(parents=True, exist_ok=True)
+
+print("Project root:", PROJECT_ROOT)
+print("Dataset:", DATA_PATH)
+print("Output directory:", OUTPUT_DIR)
+
+if not DATA_PATH.exists():
+    raise FileNotFoundError(
+        f"Stock dataset not found: {DATA_PATH}"
+    )
 
 # --------------------------------------------------
 # 2. LOAD DATASET
@@ -433,13 +452,21 @@ print(
     df.isnull().sum().sum()
 )
 
+print("\n========== PROCESSED DATA QUALITY ==========")
+
 print(
-    "\nRemaining missing values after imputation:"
+    "All training values are finite:",
+    np.isfinite(X_train_processed.data).all()
 )
 
 print(
-    X_train_processed.shape[1],
-    "processed features generated."
+    "All testing values are finite:",
+    np.isfinite(X_test_processed.data).all()
+)
+
+print(
+    "Processed features generated:",
+    X_train_processed.shape[1]
 )
 
 print("\nPreprocessing completed successfully!")

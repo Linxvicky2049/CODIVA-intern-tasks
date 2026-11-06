@@ -1,0 +1,15 @@
+RANDOM FOREST CLASSIFICATION REPORT
+=============================================
+
+              precision    recall  f1-score   support
+
+       False       0.95      0.99      0.97       572
+        True       0.93      0.68      0.79        95
+
+    accuracy                           0.95       667
+   macro avg       0.94      0.84      0.88       667
+weighted avg       0.95      0.95      0.94       667
+
+
+BEST PARAMETERS
+{'classifier__max_depth': None, 'classifier__min_samples_leaf': 2, 'classifier__min_samples_split': 2, 'classifier__n_estimators': 200}

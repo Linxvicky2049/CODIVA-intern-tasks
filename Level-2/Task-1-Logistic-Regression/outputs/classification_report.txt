@@ -1,0 +1,10 @@
+LOGISTIC REGRESSION CLASSIFICATION REPORT
+
+              precision    recall  f1-score   support
+
+       False       0.95      0.78      0.86       572
+        True       0.37      0.77      0.50        95
+
+    accuracy                           0.78       667
+   macro avg       0.66      0.77      0.68       667
+weighted avg       0.87      0.78      0.81       667

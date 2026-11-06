@@ -1,0 +1,16 @@
+
+RANDOM FOREST CLASSIFICATION SUMMARY
+
+Training records: 2666
+Testing records: 667
+
+Accuracy: 0.9475
+Precision: 0.9286
+Recall: 0.6842
+F1 Score: 0.7879
+ROC-AUC: 0.9313
+
+Cross-validation F1: 0.7915
+
+Best Parameters:
+{'classifier__max_depth': None, 'classifier__min_samples_leaf': 2, 'classifier__min_samples_split': 2, 'classifier__n_estimators': 200}

@@ -1,0 +1,15 @@
+DECISION TREE CLASSIFICATION REPORT
+=============================================
+
+              precision    recall  f1-score   support
+
+       False       0.96      0.98      0.97       572
+        True       0.84      0.74      0.79        95
+
+    accuracy                           0.94       667
+   macro avg       0.90      0.86      0.88       667
+weighted avg       0.94      0.94      0.94       667
+
+
+BEST PARAMETERS
+{'classifier__criterion': 'entropy', 'classifier__max_depth': 7, 'classifier__min_samples_leaf': 1, 'classifier__min_samples_split': 5}
