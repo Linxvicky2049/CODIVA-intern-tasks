@@ -1,110 +1,67 @@
 # Random Forest Classification
 
-## Codveda Technologies Machine Learning Internship
+## Overview
 
-**Level:** Level 3  
-**Task:** Random Forest Classification  
-**Status:** Completed  
-**Programming Language:** Python
+This project implements a Random Forest Classification model to predict customer churn using the Churn BigML dataset.
 
-## 1. Project Overview
+The objective is to train and evaluate an ensemble machine-learning model capable of identifying customers who are likely to discontinue a service.
 
-This project implements a Random Forest Classification model to predict customer churn using the customer churn dataset provided by Codveda Technologies.
+## Dataset
 
-Random Forest is an ensemble machine learning algorithm that combines multiple decision trees to improve prediction performance, reduce overfitting, and produce more reliable classifications.
+The project uses two CSV files:
 
-The objective is to identify customers who are likely to discontinue a service.
+- `churn-bigml-80.csv`: Training dataset.
+- `churn-bigml-20.csv`: Testing dataset.
 
-## 2. Dataset
+The dataset contains customer information, including account details, service usage, international plans, customer service calls, and churn status.
 
-The project uses the Codveda-provided Churn Prediction dataset.
-
-- Training dataset: `churn-bigml-80.csv`
-- Testing dataset: `churn-bigml-20.csv`
-- Training records: 2,666
-- Testing records: 667
-- Input features: 19
-- Target variable: `Churn`
-
-The dataset includes customer account information, service usage, international plans, voice mail plans, and customer service interactions.
-
-## 3. Technologies Used
+## Technologies Used
 
 - Python
 - Pandas
 - NumPy
 - Scikit-learn
 - Matplotlib
+- Seaborn
 - Joblib
 
-## 4. Methodology
+## Methodology
 
-### Data Preparation
-- Loaded the provided training and testing datasets.
-- Checked missing values and duplicate records.
-- Removed duplicate records.
-- Separated input features from the target variable.
-- Identified numerical and categorical features.
+1. Loaded the training and testing datasets.
+2. Inspected missing values and duplicate records.
+3. Separated numerical and categorical features.
+4. Applied median imputation to numerical features.
+5. Applied most-frequent imputation and one-hot encoding to categorical features.
+6. Built a preprocessing and classification pipeline.
+7. Trained a Random Forest classifier.
+8. Used GridSearchCV with stratified cross-validation to identify suitable hyperparameters.
+9. Evaluated the selected model using classification metrics.
+10. Saved the trained model, predictions, reports, and visualizations.
 
-### Data Preprocessing
-- Applied median imputation to numerical features.
-- Applied most-frequent imputation to categorical features.
-- Used One-Hot Encoding for categorical variables.
-- Implemented preprocessing using ColumnTransformer and Pipeline.
+## Best Model Parameters
 
-### Model Development
-- Implemented RandomForestClassifier.
-- Applied balanced class weights.
-- Used GridSearchCV for hyperparameter tuning.
-- Applied five-fold Stratified Cross-Validation.
-- Selected the best model using the F1 score.
+The selected model was determined through hyperparameter tuning.
 
-### Model Evaluation
-The model was evaluated using:
-- Accuracy
-- Precision
-- Recall
-- F1 Score
-- ROC-AUC
-- Classification Report
-- Confusion Matrix
-
-## 5. Model Performance
-
-The following metrics are generated after model evaluation:
+## Evaluation Results
 
 | Metric | Score |
 |---|---:|
-| Accuracy | Add actual result |
-| Precision | Add actual result |
-| Recall | Add actual result |
-| F1 Score | Add actual result |
-| ROC-AUC | Add actual result |
-| Cross-Validation F1 | Add actual result |
+| Accuracy | 94.75% |
+| Precision | 92.86% |
+| Recall | 68.42% |
+| F1 Score | 78.79% |
+| ROC-AUC | 93.13% |
+| Cross-Validation F1 | 79.15% |
 
-### Best Hyperparameters
+## Results Interpretation
 
-The optimal Random Forest configuration is automatically selected through GridSearchCV and saved in:
+The model achieved 94.75% accuracy and a ROC-AUC score of 93.13%.
 
-`outputs/classification_report.txt`
+Its precision of 92.86% indicates that most customers predicted to churn were actual churn cases.
 
-## 6. Feature Importance
+The recall of 68.42% indicates that the model identified approximately 68% of the actual churn cases. This leaves room for improvement in identifying more customers at risk of leaving.
 
-The project calculates feature importance to identify which customer attributes contribute most to the model's predictions.
-
-The top 15 features are saved in:
-
-`outputs/feature_importance.csv`
-
-## 7. Visualizations
-
-The project generates:
-
-1. Confusion Matrix
-2. ROC Curve
-3. Feature Importance Chart
-
-## 8. Project Structure
+## Project Structure
 
 ```text
 Task-1-Random-Forest/
@@ -118,8 +75,8 @@ Task-1-Random-Forest/
     ├── evaluation_metrics.csv
     ├── classification_report.txt
     ├── predictions.csv
-    ├── feature_importance.csv
     ├── random_forest_model.joblib
+    ├── feature_importance.csv
     ├── model_summary.txt
     │
     └── visualizations/
@@ -128,9 +85,9 @@ Task-1-Random-Forest/
         └── feature_importance.png
 ```
 
-## 9. How to Run
+## How to Run
 
-Activate the project environment:
+From the project root, activate the virtual environment:
 
 ```powershell
 .\env\Scripts\Activate.ps1
@@ -142,10 +99,8 @@ Run the model:
 python "Level-3\Task-1-Random-Forest\src\random_forest.py"
 ```
 
-## 10. Conclusion
+## Conclusion
 
-This project demonstrates the application of ensemble learning using Random Forest for customer churn classification.
+The Random Forest classifier successfully learned patterns associated with customer churn and achieved strong overall classification performance.
 
-It covers data preprocessing, model development, hyperparameter optimization, cross-validation, model evaluation, and feature importance analysis.
-
-Developed as part of the Codveda Technologies Machine Learning Internship.
+This project demonstrates data preprocessing, ensemble learning, hyperparameter optimization, model evaluation, and model persistence.
